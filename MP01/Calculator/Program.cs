@@ -13,7 +13,7 @@ namespace Calculator
 		public static void Main (string[] args)              //static
 		{
 			MainClass _program = new MainClass ();          //предефинира се за заделяне на памет, защото е static,  а вика не static
-			_program.uInput.justTesting ();
+			_program.uInput.getUserCommands ();
 
 		}
 	}
