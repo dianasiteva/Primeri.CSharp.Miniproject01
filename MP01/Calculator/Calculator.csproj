@@ -42,5 +42,9 @@
       <Project>{E5680D88-5009-495C-BBF2-2C597E673E0E}</Project>
       <Name>UserInput</Name>
     </ProjectReference>
+    <ProjectReference Include="..\About\About.csproj">
+      <Project>{03C56AD0-2551-4DC9-8C8F-FA2312DE410E}</Project>
+      <Name>About</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
