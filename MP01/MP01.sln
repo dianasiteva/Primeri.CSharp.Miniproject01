@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "About", "About\About.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colors", "Colors\Colors.csproj", "{7581E4A2-63A1-4C61-A411-0021B3566D49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculations", "Calculations\Calculations.csproj", "{89818C41-8D71-4CEC-B9DD-177C25AC4F9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -27,6 +29,10 @@ Global
 		{87E7D0DB-C5C4-4B5A-92F1-73CC5E95D1BD}.Debug|x86.Build.0 = Debug|x86
 		{87E7D0DB-C5C4-4B5A-92F1-73CC5E95D1BD}.Release|x86.ActiveCfg = Release|x86
 		{87E7D0DB-C5C4-4B5A-92F1-73CC5E95D1BD}.Release|x86.Build.0 = Release|x86
+		{89818C41-8D71-4CEC-B9DD-177C25AC4F9D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{89818C41-8D71-4CEC-B9DD-177C25AC4F9D}.Debug|x86.Build.0 = Debug|Any CPU
+		{89818C41-8D71-4CEC-B9DD-177C25AC4F9D}.Release|x86.ActiveCfg = Release|Any CPU
+		{89818C41-8D71-4CEC-B9DD-177C25AC4F9D}.Release|x86.Build.0 = Release|Any CPU
 		{E5680D88-5009-495C-BBF2-2C597E673E0E}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{E5680D88-5009-495C-BBF2-2C597E673E0E}.Debug|x86.Build.0 = Debug|Any CPU
 		{E5680D88-5009-495C-BBF2-2C597E673E0E}.Release|x86.ActiveCfg = Release|Any CPU
