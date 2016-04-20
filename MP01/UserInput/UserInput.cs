@@ -34,7 +34,7 @@ namespace UserInput
 //					_c.Default();  Console.Write ("Стартирана е ");
 //					_c.Result();   Console.WriteLine ("Команда 1.\n");
 				}
-//				if ( _command.ToLower().Contains ("команда2") )
+				if ( _command.ToLower().Contains ("въгъл") ) _calc.F02.calc (_command);
 //				{
 //					_c.Default();  Console.Write ("Стартирана е ");
 //					_c.Result();   Console.WriteLine ("Команда 2.\n");

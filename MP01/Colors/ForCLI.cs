@@ -20,7 +20,7 @@ namespace Colors
 
 		public void Command ()
 		{
-			Console.ForegroundColor = ConsoleColor.DarkYellow;
+			Console.ForegroundColor = ConsoleColor.Magenta;
 		}
 
 		public void Result ()
