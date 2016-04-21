@@ -48,6 +48,8 @@ namespace UserInput
 //					_c.Default();  Console.Write ("Стартирана е ");
 //					_c.Result();   Console.WriteLine ("Команда 3.\n");
 //				}
+				if ( _command.ToLower().Contains ("съгъл") ) _calc.F04.calc (_command);
+				if ( _command.ToLower().Contains ("канал") ) _calc.F05.calc (_command);
 
 				if ( _command.ToLower().Contains ("помощ") || _command.ToLower() == "п" )      _calc.commands ();
 

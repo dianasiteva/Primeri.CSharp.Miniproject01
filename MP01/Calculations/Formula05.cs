@@ -2,18 +2,19 @@
 
 namespace Calculations
 {
-	public class Formula03
+	public class Formula05
 	{
 
-		private Colors.ForCLI _cl = new Colors.ForCLI();   //CLI - command line interface
+		private Colors.ForCLI _cl = new Colors.ForCLI();
 
-		//Формула за изпъкнал ъгъл
-		public Formula03 ()
+		public Formula05 ()
 		{
 		}
 
 
-		//Метод
+
+
+
 		public void calc ( string _input )
 		{
 			try{
@@ -33,7 +34,7 @@ namespace Calculations
 					double result = 0;
 					if ( runCalculate ( param, out result ) )
 					{
-						_cl.Default(); Console.Write ("Обемът на изпъкналия ъгъл е: ");
+						_cl.Default(); Console.Write ("Обемът на каналния изкоп е: ");
 						_cl.Result();  Console.Write (result.ToString("N3"));
 						_cl.Default(); Console.WriteLine ( " м3\n" );
 					}else{
@@ -51,15 +52,16 @@ namespace Calculations
 		private bool runCalculate ( string[] _param, out double _rezult )
 		{
 			try{
-				double a = 0, b = 0, h = 0;
+				double a = 0, b = 0, h = 0, L = 0;
 				//_param[0] == <ime na komandata>
 				Double.TryParse ( _param[1], out a );
 				Double.TryParse ( _param[2], out b );
 				Double.TryParse ( _param[3], out h );
+				Double.TryParse ( _param[4], out L );
 
-				if ( a>0 && b>0 && h>0 && _param.Length ==4)
+				if ( a>0 && b>0 && h>0 && L>0 && _param.Length ==5)
 				{
-					_rezult = a*b*h*2/3;
+					_rezult = (a + b) / 2 * h * L;
 					return true;
 				}
 			}catch{
@@ -73,21 +75,30 @@ namespace Calculations
 
 		private void help()
 		{
-			_cl.Result (); Console.Write ("[иъгъл]");
-			_cl.Default(); Console.WriteLine ( " - команда за пресмятане на изпъкнал ъгъл" );
+			_cl.Result (); Console.Write ("[канал]");
+			_cl.Default(); Console.WriteLine ( " - команда за пресмятане на канален изкоп" );
 
 			_cl.Command(); Console.Write ("параметри ( в метри ): ");
-			_cl.Default(); Console.WriteLine ( "a b h\n" );
+			_cl.Default(); Console.WriteLine ( "a b h L\n" );
 
 			_cl.Command(); Console.Write ("параметри а и b: ");
-			_cl.Default(); Console.WriteLine ( " - ширина и дължина на ъгъла" );
+			_cl.Default(); Console.WriteLine ( " - горна и долна ширина на профила" );
 
 			_cl.Command(); Console.Write ("параметър h: ");
-			_cl.Default(); Console.WriteLine ( " - височина на изкопа\n" );
+			_cl.Default(); Console.WriteLine ( " - височина на профила" );
+
+			_cl.Command(); Console.Write ("параметър L: ");
+			_cl.Default(); Console.WriteLine ( " - дължина на профила\n" );
 
 			_cl.Command(); Console.Write ("Пример: ");
-			_cl.Default(); Console.WriteLine ( "иъгъл 1 1 3\n" );
+			_cl.Default(); Console.WriteLine ( "канал 3 1 2 100\n" );
 		}
+
+
+
+
+
+
 
 
 	}

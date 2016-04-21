@@ -16,7 +16,7 @@ namespace Calculations
 			{
 				try{
 					string[] param = _userInput.Split(' ');
-					if (param.Length > 1 && _userInput.Contains ( "-п" )) 
+				if (param.Length > 1 && _userInput.Contains ( "-п" )) 
 					{
 						//Помощ за командата
 						help();
@@ -78,7 +78,7 @@ namespace Calculations
 			_c.Result (); Console.Write ("[яма]");
 			_c.Default(); Console.WriteLine ( " - команда за пресмятане на строителна яма" );
 
-			_c.Command(); Console.Write ("параметри: ");
+			_c.Command(); Console.Write ("параметри ( в метри ): ");
 			_c.Default(); Console.WriteLine ( "a1 b1 a2 b2 h\n" );
 			_c.Command(); Console.Write ("параметри а1 и b1: ");
 			_c.Default(); Console.WriteLine ( " - ширина и дължина на горната страна на изкопа" );

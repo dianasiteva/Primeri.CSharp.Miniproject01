@@ -26,7 +26,7 @@ namespace Calculations
 
 			}
 
-				if (param.Length > 1  && !_input.ToLower().Contains ( "-п" ) && param.Length == 4) 
+				if (param.Length > 1  && !_input.ToLower().Contains ( "-п" )) 
 				{
 				//Изчисления
 						double result = 0;
@@ -73,8 +73,8 @@ namespace Calculations
 			_cl.Result (); Console.Write ("[въгъл]");
 			_cl.Default(); Console.WriteLine ( " - команда за пресмятане на вдлъбнат ъгъл" );
 
-			_cl.Command(); Console.Write ("параметри: ");
-			_cl.Default(); Console.WriteLine ( "a b и h\n" );
+			_cl.Command(); Console.Write ("параметри ( в метри ): ");
+			_cl.Default(); Console.WriteLine ( "a b h\n" );
 
 			_cl.Command(); Console.Write ("параметри а и b: ");
 			_cl.Default(); Console.WriteLine ( " - ширина и дължина на ъгъла" );
