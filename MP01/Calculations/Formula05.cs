@@ -2,6 +2,11 @@
 
 namespace Calculations
 {
+
+
+	/// <summary>
+	/// Клас за формула за канален изкоп. (Формула 5) </summary>
+
 	public class Formula05
 	{
 
@@ -13,7 +18,10 @@ namespace Calculations
 
 
 
-
+		/// <summary>
+		/// Метод за пресмятане на Формула 5.
+		/// </summary>
+		/// <param name="_input">Въведено от потребителя.</param>
 
 		public void calc ( string _input )
 		{
@@ -49,6 +57,14 @@ namespace Calculations
 
 
 		//Метод
+
+		/// <summary>
+		/// Вътрешен метод за формула 5 след парсване на командата от потребителя.
+		/// </summary>
+		/// <returns><c>true</c>, ако има изчислено, <c>false</c> грешка.</returns>
+		/// <param name="_param">Въведеното разделено в масив.</param>
+		/// <param name="_rezult">Изчисленият обем.</param>
+
 		private bool runCalculate ( string[] _param, out double _rezult )
 		{
 			try{
@@ -72,7 +88,8 @@ namespace Calculations
 
 		}
 
-
+		/// <summary>
+		/// Вътрешен метод, показващ синтаксиса на командата в командния ред. </summary>
 		private void help()
 		{
 			_cl.Result (); Console.Write ("[канал]");

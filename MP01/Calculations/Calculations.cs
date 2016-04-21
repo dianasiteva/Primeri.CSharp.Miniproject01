@@ -2,6 +2,10 @@
 
 namespace Calculations
 {
+
+	/// <summary>
+	/// Main library. </summary>
+
 	public class MainLibrary   //Главен клас
 	{
 		//Дефиниции
@@ -15,11 +19,18 @@ namespace Calculations
 		private Colors.ForCLI _cl = new Colors.ForCLI ();
 
 		//Конструктор
+		/// <summary>
+		/// Конструктор на Главната библиотека
+		/// </summary>
 		public MainLibrary ()
 		{
 		}
 
 		//Методи
+		/// <summary>
+		/// Метод за наличните команди.
+		/// </summary>
+
 		public void commands()
 		{
 			_cl.Default (); Console.WriteLine ("Налични команди ( въвеждат се без квадратните скоби и параметрите - в метри;");

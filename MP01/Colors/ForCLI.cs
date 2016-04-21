@@ -2,6 +2,10 @@
 
 namespace Colors
 {
+
+	/// <summary>
+	/// For CLI. Определяне на цветовата гама. </summary>
+
 	public class ForCLI
 	{
 		public ForCLI ()

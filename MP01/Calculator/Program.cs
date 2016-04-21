@@ -2,6 +2,11 @@
 
 namespace Calculator
 {
+
+	/// <summary>
+	/// Главен модул Калкулатор. </summary>
+
+
 	class MainClass
 	{
 		//Дефиниране на библиотеки

@@ -2,16 +2,28 @@
 
 namespace UserInput
 {
+
+	/// <summary>
+	/// Вход за потребителя. </summary>
+
 	public class UInput
 	{
 		About.Me about = new About.Me();
 		Colors.ForCLI _c = new Colors.ForCLI();
 		Calculations.MainLibrary _calc = new Calculations.MainLibrary();
 
+		/// <summary>
+		/// Конструктор на потребителския вход
+		/// </summary>
+
 		public UInput ()
 		{
 		}
 
+
+		/// <summary>
+		/// Метод за поздрав в началото
+		/// </summary>
 		public void sayHello ()
 		{
 			_c.Default ();
@@ -21,6 +33,10 @@ namespace UserInput
 
 		}
 
+
+		/// <summary>
+		/// Метод за вземане на потребителската команда
+		/// </summary>
 		public void getUserCommands()
 		{
 			string _command="";
@@ -65,7 +81,9 @@ namespace UserInput
 			}while (_command.ToLower () != "изход" );
 		}
 
-
+		/// <summary>
+		/// Тест метод за стартиране
+		/// </summary>
 		public void justTesting()     //примерна функция
 		{
 			Console.WriteLine ( "Стартиране на UserInput.UInput.justTesting ()" );
