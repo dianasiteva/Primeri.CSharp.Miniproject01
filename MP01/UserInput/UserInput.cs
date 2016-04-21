@@ -12,10 +12,13 @@ namespace UserInput
 		{
 		}
 
-		public void sejHello ()
+		public void sayHello ()
 		{
 			_c.Default ();
 			Console.WriteLine ("Добре дошли в "  + about.shortname + "\n" + about.version  + "\n");
+
+			_calc.commands ();
+
 		}
 
 		public void getUserCommands()
@@ -40,11 +43,21 @@ namespace UserInput
 //					_c.Result();   Console.WriteLine ("Команда 2.\n");
 //				}
 //
-//				if ( _command.ToLower().Contains ("команда3") ) 
+				if ( _command.ToLower().Contains ("иъгъл") ) _calc.F03.calc (_command);
 //				{
 //					_c.Default();  Console.Write ("Стартирана е ");
 //					_c.Result();   Console.WriteLine ("Команда 3.\n");
 //				}
+
+				if ( _command.ToLower().Contains ("помощ") || _command.ToLower() == "п" )      _calc.commands ();
+
+				if ( _command.ToLower().Contains ("изчисти") || _command.ToLower() == "и" )      
+				{
+					Console.Clear();
+					_c.Default ();
+					Console.WriteLine ("Добре дошли в "  + about.shortname + "\n" + about.version  + "\n");
+
+				}
 
 
 			}while (_command.ToLower () != "изход" );

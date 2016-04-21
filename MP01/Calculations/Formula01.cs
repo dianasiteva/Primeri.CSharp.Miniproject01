@@ -16,13 +16,13 @@ namespace Calculations
 			{
 				try{
 					string[] param = _userInput.Split(' ');
-					if (_userInput.Length > 1 && _userInput.Contains ( "-п" )) 
+					if (param.Length > 1 && _userInput.Contains ( "-п" )) 
 					{
 						//Помощ за командата
 						help();
 
 					}
-				if (_userInput.Length > 1 && !_userInput.Contains ( "-п" )) 
+				if (param.Length > 1 && !_userInput.Contains ( "-п" )) 
 					{
 						//Изчисления
 						double result = 0;

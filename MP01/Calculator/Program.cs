@@ -19,7 +19,7 @@ namespace Calculator
 			Console.Title = _program.about.shortname + ", " + _program.about.version;
 
 			//Стартиране на програмата
-			_program.uInput.sejHello ();
+			_program.uInput.sayHello ();
 			_program.uInput.getUserCommands ();
 
 		}

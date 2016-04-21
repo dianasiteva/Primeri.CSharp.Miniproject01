@@ -2,12 +2,13 @@
 
 namespace Calculations
 {
-	public class Formula02
+	public class Formula03
 	{
+
 		private Colors.ForCLI _cl = new Colors.ForCLI();   //CLI - command line interface
 
-		//Формула за вдлъбнат ъгъл
-		public Formula02 ()
+		//Формула за изпъкнал ъгъл
+		public Formula03 ()
 		{
 		}
 
@@ -15,24 +16,24 @@ namespace Calculations
 		//Метод
 		public void calc ( string _input )
 		{
-		try{
-				
-			string[] param = _input.Split(' ');
+			try{
+
+				string[] param = _input.Split(' ');
 
 				if (param.Length > 1 && _input.ToLower().Contains ( "-п" )) 
-			{
-				//Помощ за командата
-				help();
+				{
+					//Помощ за командата
+					help();
 
-			}
+				}
 
 				if (param.Length > 1  && !_input.ToLower().Contains ( "-п" ) && param.Length == 4) 
 				{
-				//Изчисления
-						double result = 0;
+					//Изчисления
+					double result = 0;
 					if ( runCalculate ( param, out result ) )
 					{
-						_cl.Default(); Console.Write ("Обемът на вдлъбнатия ъгъл е: ");
+						_cl.Default(); Console.Write ("Обемът на изпъкналия ъгъл е: ");
 						_cl.Result();  Console.Write (result.ToString("N3"));
 						_cl.Default(); Console.WriteLine ( " м3\n" );
 					}else{
@@ -43,6 +44,8 @@ namespace Calculations
 			}catch{
 			}
 		}
+
+
 
 		//Метод
 		private bool runCalculate ( string[] _param, out double _rezult )
@@ -56,8 +59,8 @@ namespace Calculations
 
 				if ( a>0 && b>0 && h>0 && _param.Length ==4)
 				{
-						_rezult = a*b*h/3;
-						return true;
+					_rezult = a*b*h*2/3;
+					return true;
 				}
 			}catch{
 			}
@@ -70,8 +73,8 @@ namespace Calculations
 
 		private void help()
 		{
-			_cl.Result (); Console.Write ("[въгъл]");
-			_cl.Default(); Console.WriteLine ( " - команда за пресмятане на вдлъбнат ъгъл" );
+			_cl.Result (); Console.Write ("[иъгъл]");
+			_cl.Default(); Console.WriteLine ( " - команда за пресмятане на изпъкнал ъгъл" );
 
 			_cl.Command(); Console.Write ("параметри: ");
 			_cl.Default(); Console.WriteLine ( "a b и h\n" );
@@ -83,8 +86,9 @@ namespace Calculations
 			_cl.Default(); Console.WriteLine ( " - височина на изкопа\n" );
 
 			_cl.Command(); Console.Write ("Пример: ");
-			_cl.Default(); Console.WriteLine ( "въгъл 1 1 3\n" );
+			_cl.Default(); Console.WriteLine ( "иъгъл 1 1 3\n" );
 		}
+
 
 	}
 }
